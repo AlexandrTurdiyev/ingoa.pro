@@ -1,3 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 
+html {
+  font-family: "Ubuntu", sans-serif;
+  line-height: 105%;
+}
+
+body {
+  background-color: #5B7B89;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.cover {
+  position: relative;
+}
+.cover__inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.375rem;
+}
+
+.logo__title-link-text {
+  color: #E9E9E9;
+  font-size: 4rem;
+  font-weight: 400;
+  transition: all 0.2s ease-out;
+}
+.logo__title-link-text:hover {
+  color: #FF5C00;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+.logo__description-text {
+  color: #999999;
+  font-size: 1.25rem;
+}
+
+.media {
+  display: flex;
+  gap: 1rem;
+}
+.media__icon {
+  transition: all 0.2s ease-in-out;
+}
+.media:has(a[id=instagramLink]:hover) #instagramIcon {
+  fill: #FF5C00;
+}
+.media:has(a[id=telegramLink]:hover) #telegramIcon {
+  fill: #FF5C00;
+}
+.media:has(a[id=facebookLink]:hover) #facebookIcon {
+  fill: #FF5C00;
+}
 
 /*# sourceMappingURL=style.css.map */
