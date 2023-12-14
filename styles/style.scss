@@ -158,17 +158,15 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
-  &__item {
-    border: 1px solid black;
-    border-radius: 0.625rem;
-    overflow: hidden;
-  }
+  &__item {}
 }
 
 .article-preview {
   background-color: #FFF;
   display: flex;
   flex-direction: column;
+  border-radius: 0.625rem;
+  overflow: hidden;
   &__title {
     padding: 2rem 2.5rem;
   }
@@ -186,12 +184,21 @@ a {
   }
   &__description {}
   &__image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: auto;
+    overflow: hidden;
   }
   &__img {
     width: 100%;
     height: max(100px, auto, 100%);
+    transform: scale(1.05);
+    transition: all .2s ease-in-out;
+    }
+  &__img:hover {
+    transform: scale(1);
   }
   &__text-wrapper {
     padding: 2rem 2.5rem;

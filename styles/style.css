@@ -146,16 +146,12 @@ a {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
 }
-.articles-catalog__item {
-  border: 1px solid black;
-  border-radius: 0.625rem;
-  overflow: hidden;
-}
-
 .article-preview {
   background-color: #FFF;
   display: flex;
   flex-direction: column;
+  border-radius: 0.625rem;
+  overflow: hidden;
 }
 .article-preview__title {
   padding: 2rem 2.5rem;
@@ -173,12 +169,21 @@ a {
   color: #BA2F1D;
 }
 .article-preview__image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: auto;
+  overflow: hidden;
 }
 .article-preview__img {
   width: 100%;
   height: max(100px, auto, 100%);
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}
+.article-preview__img:hover {
+  transform: scale(1);
 }
 .article-preview__text-wrapper {
   padding: 2rem 2.5rem;
