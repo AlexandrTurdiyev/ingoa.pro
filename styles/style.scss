@@ -36,6 +36,8 @@ a {
   max-height: 30.625rem;
   display: flex;
   justify-content: center;
+  max-width: 100%;
+  overflow: hidden;
   &__img {
 
   }
@@ -99,10 +101,16 @@ a {
 }
 /* ------------------------------------- */
 /* ------------------------------------- */
+.menu-wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
 .menu {
   background-color: #172225;
-  width: 100%;
-  padding: 1.25rem 2.5rem;
+  &__inner {
+    width: 100%;
+    padding: 1.25rem 2.5rem;
+  }
 }
 
 .nav {
@@ -148,13 +156,69 @@ a {
   grid-gap: 2rem;
   &__item {
     border: 1px solid black;
+    border-radius: 0.625rem;
+    overflow: hidden;
   }
 }
+
+.article-preview {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  &__title {
+    padding: 2rem 2.5rem;
+  }
+  &__title-text {
+    color: #1E2C30;
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 105%;
+  }
+  &__title-link {
+    transition: all .2s ease-in-out;
+  }
+  &__title-link:hover {
+    color: #BA2F1D;
+  }
+  &__description {}
+  &__image-wrapper {
+    width: 100%;
+    height: auto;
+  }
+  &__img {
+    width: 100%;
+    height: max(100px, auto, 100%);
+  }
+  &__text-wrapper {
+    padding: 2rem 2.5rem;
+  }
+  &__text {
+    color: #666666;
+    font-size: 1rem;
+    line-height: 150%;
+  }
+  &__timestamp {
+    width: 100%;
+  }
+  &__timestamp-inner {
+    background-color: #EFF2F3;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 1rem 2.5rem;
+  }
+  &__date-text {
+    color: #BA2F1D;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+}
+
 /* ------------------------------------- */
 /* ------------------------------------- */
 .footer {
+  background-color: #172225;
   &__inner {
-    background-color: #172225;
     display: flex;
     justify-content: space-between;
     padding: 1.25rem 2.5rem;
