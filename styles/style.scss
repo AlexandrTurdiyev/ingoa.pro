@@ -33,11 +33,15 @@ a {
 /* ------------------------------------- */
 .cover {
   position: relative;
-  max-height: 30.625rem;
+  height: 30.625rem;
   display: flex;
   justify-content: center;
   max-width: 100%;
   overflow: hidden;
+  background: url("../images/cover.jpg") center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   &__img {
 
   }
