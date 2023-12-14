@@ -27,13 +27,18 @@ a {
 .container {
   max-width: 1440px;
   margin: 0 auto;
+  overflow: hidden;
 }
 /* ------------------------------------- */
 /* ------------------------------------- */
 .cover {
   position: relative;
   max-height: 30.625rem;
-  &__img {}
+  display: flex;
+  justify-content: center;
+  &__img {
+
+  }
   &__inner {
     position: absolute;
     inset: 0;

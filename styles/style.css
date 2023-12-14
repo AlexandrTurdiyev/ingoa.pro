@@ -23,6 +23,7 @@ a {
 .container {
   max-width: 1440px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 /* ------------------------------------- */
@@ -30,6 +31,8 @@ a {
 .cover {
   position: relative;
   max-height: 30.625rem;
+  display: flex;
+  justify-content: center;
 }
 .cover__inner {
   position: absolute;
