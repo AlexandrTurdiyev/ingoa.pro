@@ -1,6 +1,9 @@
+/* ------------------------------------- */
+/* ------------------------------------- */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -22,8 +25,11 @@ a {
   margin: 0 auto;
 }
 
+/* ------------------------------------- */
+/* ------------------------------------- */
 .cover {
   position: relative;
+  max-height: 30.625rem;
 }
 .cover__inner {
   position: absolute;
@@ -43,18 +49,18 @@ a {
 }
 .logo__title-link-text:hover {
   color: #FF5C00;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
 }
 .logo__description-text {
   color: #999999;
   font-size: 1.25rem;
 }
 
-.media {
+.header-media {
   display: flex;
   gap: 1rem;
 }
-.media__icon {
+.media__link-icon {
   transition: all 0.2s ease-in-out;
 }
 .media:has(a[id=instagramLink]:hover) #instagramIcon {
@@ -65,6 +71,82 @@ a {
 }
 .media:has(a[id=facebookLink]:hover) #facebookIcon {
   fill: #FF5C00;
+}
+.media:has(a[id=gmailLink]:hover) #gmailIconPart1 {
+  fill: #FF5C00;
+}
+.media:has(a[id=gmailLink]:hover) #gmailIconPart2 {
+  fill: #FF5C00;
+}
+.media:has(a[id=githubLink]:hover) #githubIcon {
+  fill: #FF5C00;
+}
+
+/* ------------------------------------- */
+/* ------------------------------------- */
+.menu {
+  background-color: #172225;
+  width: 100%;
+  padding: 1.25rem 2.5rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav__item-separator {
+  color: #A2A7A8;
+  font-weight: 700;
+}
+.nav__link {
+  color: #A2A7A8;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+}
+.nav__link:hover {
+  color: #FFF;
+  text-shadow: 1px 1px 4px rgb(0, 0, 0);
+}
+
+.search {
+  display: none;
+}
+
+/* ------------------------------------- */
+/* ------------------------------------- */
+.main {
+  max-width: 1440px;
+  padding: 4.5rem 2rem;
+}
+
+.articles-catalog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+.articles-catalog__item {
+  border: 1px solid black;
+}
+
+/* ------------------------------------- */
+/* ------------------------------------- */
+.footer__inner {
+  background-color: #172225;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25rem 2.5rem;
+}
+.footer__year {
+  color: #A2A7A8;
+  font-size: 1.375rem;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */

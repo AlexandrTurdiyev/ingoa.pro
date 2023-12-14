@@ -1,6 +1,13 @@
+$logoTitleColor: #E9E9E9;
+$logoTitleHoverColor: #FF5C00;
+$socialIconColor: #E9E9E9;
+$socialIconHoverColor: #FF5C00;
+/* ------------------------------------- */
+/* ------------------------------------- */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -21,9 +28,11 @@ a {
   max-width: 1440px;
   margin: 0 auto;
 }
-
+/* ------------------------------------- */
+/* ------------------------------------- */
 .cover {
   position: relative;
+  max-height: 30.625rem;
   &__img {}
   &__inner {
     position: absolute;
@@ -39,14 +48,14 @@ a {
 .logo {
   &__title {}
   &__title-link-text {
-    color: #E9E9E9;
+    color: $logoTitleColor;
     font-size: 4rem;
     font-weight: 400;
     transition: all 0.2s ease-out;
   }
   &__title-link-text:hover {
-    color: #FF5C00;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+    color: $logoTitleHoverColor;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
   }
   &__description-text {
     color: #999999;
@@ -54,23 +63,101 @@ a {
   }
 }
 
-.media {
+.header-media {
   display: flex;
   gap: 1rem;
   &__link {}
-  &__icon {
+}
+
+.media {
+  &__link-icon {
     transition: all 0.2s ease-in-out;
   }
   &:has(a[id="instagramLink"]:hover) #instagramIcon {
-    fill: #FF5C00;
+    fill: $socialIconHoverColor;
   }
   &:has(a[id="telegramLink"]:hover) #telegramIcon {
-    fill: #FF5C00;
+    fill: $socialIconHoverColor;
   }
   &:has(a[id="facebookLink"]:hover) #facebookIcon {
-    fill: #FF5C00;
+    fill: $socialIconHoverColor;
+  }
+  &:has(a[id="gmailLink"]:hover) #gmailIconPart1 {
+    fill: $socialIconHoverColor;
+  }
+  &:has(a[id="gmailLink"]:hover) #gmailIconPart2 {
+    fill: $socialIconHoverColor;
+  }
+  &:has(a[id="githubLink"]:hover) #githubIcon {
+    fill: $socialIconHoverColor;
   }
 }
+/* ------------------------------------- */
+/* ------------------------------------- */
+.menu {
+  background-color: #172225;
+  width: 100%;
+  padding: 1.25rem 2.5rem;
+}
 
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
 
+  &__item-separator {
+    color: #A2A7A8;
+    font-weight: 700;
+  }
+
+  &__link {
+    color: #A2A7A8;
+    font-weight: 700;
+    transition: all .2s ease-in-out;
+  }
+
+  &__link:hover {
+    color: #FFF;
+    text-shadow: 1px 1px 4px rgb(0, 0, 0);
+  }
+}
+.search {
+  display: none;
+}
+/* ------------------------------------- */
+/* ------------------------------------- */
+.main {
+  max-width: 1440px;
+  padding: 4.5rem 2rem;
+}
+.articles-catalog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  &__item {
+    border: 1px solid black;
+  }
+}
+/* ------------------------------------- */
+/* ------------------------------------- */
+.footer {
+  &__inner {
+    background-color: #172225;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25rem 2.5rem;
+  }
+  &__item {}
+  &__year {
+    color: #A2A7A8;
+    font-size: 1.375rem;
+    font-weight: 700;
+  }
+}
