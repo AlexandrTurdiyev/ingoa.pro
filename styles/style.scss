@@ -1,7 +1,7 @@
 $logoTitleColor: #E9E9E9;
-$logoTitleHoverColor: #ff7930;
+$logoTitleHoverColor: #c24646;
 $socialIconColor: #E9E9E9;
-$socialIconHoverColor: #ff7930;
+$socialIconHoverColor: #c24646;
 /* ------------------------------------- */
 /* ------------------------------------- */
 * {
@@ -29,6 +29,7 @@ a {
   margin: 0 auto;
   overflow: hidden;
 }
+
 /* ------------------------------------- */
 /* ------------------------------------- */
 .cover {
@@ -39,7 +40,6 @@ a {
   max-width: 100%;
   overflow: hidden;
   background: url("../images/cover.jpg") center;
-  background-repeat: no-repeat;
   background-size: cover;
 
   &__img {
@@ -105,6 +105,13 @@ a {
 }
 /* ------------------------------------- */
 /* ------------------------------------- */
+.burger {
+  display: none;
+  &__name {
+    visibility: hidden;
+  }
+}
+/* ------------------------------------- */
 .menu-wrapper {
     max-width: 1440px;
     margin: 0 auto;
@@ -112,8 +119,11 @@ a {
 .menu {
   background-color: #172225;
   &__inner {
+    display: flex;
     width: 100%;
+    height: calc(2.5rem + 1rem);
     padding: 1.25rem 2.5rem;
+    transition: all .2s ease-in-out;
   }
 }
 
@@ -137,7 +147,7 @@ a {
   &__link {
     color: #A2A7A8;
     font-weight: 700;
-    transition: all .2s ease-in-out;
+    transition: color .2s ease-in-out;
   }
 
   &__link:hover {
@@ -252,8 +262,18 @@ a {
 }
 
 @media (max-width: 1024px) {
+  .burger {
+    display: block;
+    &__name {
+      visibility: visible;
+    }
+  }
   .articles-catalog {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .nav__list {
+    visibility: hidden;
+    flex-direction: column;
   }
 }
 
@@ -303,5 +323,26 @@ a {
   }
   .articles-catalog {
     grid-gap: 1rem;
+  }
+}
+
+@media (max-width: 240px) {
+  .logo__title-link-text {font-size: 1.75rem}
+  .article-preview__title {padding: 0.5rem 0.75rem;}
+  .article-preview__title-text {font-size: 1rem}
+  .article-preview__text-wrapper {padding: 0.5rem 0.75rem;}
+  .article-preview__text {font-size: 0.75rem}
+  .article-preview__timestamp-inner {padding: 0.5rem 0.75rem;}
+  .article-preview__date-text {font-size: 0.5rem}
+  .main {
+    padding: 1rem 0.5rem;
+  }
+  .articles-catalog {
+    grid-gap: 1rem;
+  }
+  .footer__inner {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
   }
 }
